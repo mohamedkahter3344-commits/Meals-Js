@@ -1,0 +1,55 @@
+/* sm */
+@media (min-width: 567px) {
+}
+
+/* md */
+@media (min-width: 768px) {
+  header .image-food .reviews i {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+  header .image-food .reviews strong {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+  header .image-food .reviews p {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+  }
+  header .prepare-time-serving .prepare-icon,
+  header .prepare-time-serving .prepare-time-icon,
+  header .prepare-time-serving .prepare-serving {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+  header .prepare-time-serving .title-prepare {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+  }
+  header .content-food-title .title-food-head {
+    font-size: 2.25rem;
+    line-height: 40px;
+  }
+  header .content-food-title .title-food-desc {
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+  }
+  header .tab-content::before {
+    top: 110%;
+  }
+}
+
+/* lg */
+@media (min-width: 992px) {
+  .navbar-collapse .nav-item.save-recipe::after {
+    display: none;
+  }
+}
+
+/* xl */
+@media (min-width: 1200px) {
+}
+
+/* xxl */
+@media (min-width: 1400px) {
+}

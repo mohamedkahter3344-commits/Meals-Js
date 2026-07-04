@@ -1,0 +1,368 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>What's For Dinner</title>
+    <link rel="shortcut icon" href="./Images/favicon.jpg" type="image/x-icon">
+    <!-- Link Font Awesome -->
+    <link rel="stylesheet" href="./CSS Files/all.min.css" />
+    <!-- Link Bootstrap File -->
+    <link rel="stylesheet" href="./CSS Files/bootstrap.min.css" />
+    <!-- Link Main File Style -->
+    <link rel="stylesheet" href="./CSS Files/main.css" />
+    <!-- Link Responsive Design -->
+    <link rel="stylesheet" href="./CSS Files/media.css" />
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg py-3">
+      <div class="container-md">
+        <div class="logo d-flex align-items-center gap-2">
+          <span
+            class="rounded-circle d-flex justify-content-center shadow align-items-center text-white"
+            ><i class="fa-solid fa-utensils"></i
+          ></span>
+          <div class="title-logo align-self-center">
+            <h1 class="h3 my-0">What's For Dinner</h1>
+            <p class="my-0">Your daily meal inspiration</p>
+          </div>
+        </div>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <i class="fa-solid fa-bars icon-bar"></i>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-lg-center align-items-start py-2">
+            <li class="nav-item save-recipe d-flex align-items-center gap-2">
+              <a class="nav-link" aria-current="page" href="#"
+                ><i class="fa-solid fa-bookmark"></i
+              ></a>
+            </li>
+            <li class="nav-item recent d-flex align-items-center gap-2">
+              <a class="nav-link" href="#"
+                ><i class="fa-solid fa-clock-rotate-left"></i
+              ></a>
+            </li>
+            <li class="nav-item setting d-flex align-items-center gap-2">
+              <a class="nav-link" href="#"><i class="fa-solid fa-gear"></i></a>
+            </li>
+            <li class="nav-item profile d-flex align-items-center gap-2">
+              <a class="nav-link" href="#">
+                <img
+                  src="./Images/avatar-4.jpg"
+                  class="img-person rounded-circle"
+                  alt=""
+                />
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <header class="py-5 min-vh-100">
+      <div class="container-lg">
+        <div class="row rounded-3 shadow g-0 overflow-hidden" id="rowDate">
+          <div class="col-lg-5">
+            <div class="image-food position-relative h-100">
+              <img
+                class="img-fluid object-fit-cover h-100 w-100 rounded-3"
+                alt=""
+              />
+              <div
+                class="reviews d-flex align-items-center gap-2 position-absolute p-2 bg-white rounded-pill"
+              >
+                <i class="fa-solid fa-star text-warning"></i>
+                <strong></strong>
+                <p class="my-0"></p>
+              </div>
+              <div
+                class="prepare-time-serving bg-white d-flex justify-content-around align-items-center position-absolute translate-middle-x py-3 text-center rounded-4"
+              >
+                <div class="prep-time">
+                  <span class="prepare-icon"
+                    ><i class="fa-solid fa-clock"></i
+                  ></span>
+                  <p class="my-1 title-prepare">Prep Time</p>
+                  <p class="my-1 fw-bold" id="prepTime"></p>
+                </div>
+                <div class="prep-time">
+                  <span class="prepare-time-icon"
+                    ><i class="fa-solid fa-fire-burner"></i
+                  ></span>
+                  <p class="my-1 title-prepare">Cook Time</p>
+                  <p class="my-1 fw-bold" id="prepCook"></p>
+                </div>
+                <div class="prep-time">
+                  <span class="text-info prepare-serving"
+                    ><i class="fa-solid fa-users"></i
+                  ></span>
+                  <p class="my-1 title-prepare">Servings</p>
+                  <p class="my-1 fw-bold" id="servPepole"></p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-7 p-4 custom-scroll">
+            <div class="food-level d-flex align-items-center gap-3">
+              <span
+                class="px-3 py-2 rounded-pill level-item"
+                id="levelFood"
+              ></span>
+              <span
+                class="px-3 py-2 rounded-pill country-food"
+                id="countryFood"
+              ></span>
+            </div>
+            <div
+              class="title-food py-3 d-flex justify-content-between align-items-center  flex-sm-row flex-column-reverse gap-3 gap-sm-1"
+            >
+              <div class="content-food-title">
+                <h3 class="title-food-head" id="titleFood"></h3>
+                <p class="title-food-desc" id="descFood"></p>
+              </div>
+              <div class="icons-badge-food d-flex align-items-center gap-2">
+                <a
+                  href="#"
+                  class="icon-save d-flex justify-content-center align-items-center rounded-3"
+                >
+                  <i class="fa-solid fa-bookmark"></i>
+                </a>
+                <a
+                  href="#"
+                  class="icon-share d-flex justify-content-center align-items-center rounded-3"
+                >
+                  <i class="fa-solid fa-share-nodes"></i>
+                </a>
+              </div>
+            </div>
+
+            <div class="alert-msg align-items-center gap-3 p-4 rounded-4" id="alertMsg">
+              <span><i class="fa-solid fa-triangle-exclamation"></i></span>
+              <div class="title-alert">
+                <h5 class="my-0">Extended Preparation Time</h5>
+                <p class="my-0">
+                  This recipe requires more than 45 minutes to prepare. Plan
+                  accordingly!
+                </p>
+              </div>
+            </div>
+
+            <nav class="nav-food-tabs py-2">
+              <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                <button
+                  class="nav-link active"
+                  id="nav-ingredients-tab"
+                  data-bs-toggle="tab"
+                  data-bs-target="#nav-ingredients"
+                  type="button"
+                  role="tab"
+                  aria-controls="nav-ingredients"
+                  aria-selected="true"
+                >
+                  <span><i class="fa-solid fa-list-check"></i></span>
+                  Ingredients
+                </button>
+                <button
+                  class="nav-link"
+                  id="nav-instruction-tab"
+                  data-bs-toggle="tab"
+                  data-bs-target="#nav-instruction"
+                  type="button"
+                  role="tab"
+                  aria-controls="nav-instruction"
+                  aria-selected="false"
+                >
+                  <span><i class="fa-solid fa-book-open"></i></span>
+                  Instructions
+                </button>
+                <button
+                  class="nav-link"
+                  id="nav-nutrition-tab"
+                  data-bs-toggle="tab"
+                  data-bs-target="#nav-nutrition"
+                  type="button"
+                  role="tab"
+                  aria-controls="nav-nutrition"
+                  aria-selected="false"
+                >
+                  <span><i class="fa-solid fa-chart-pie"></i></span>
+                  Nutrition
+                </button>
+                <button
+                  class="nav-link"
+                  id="nav-chef-tab"
+                  data-bs-toggle="tab"
+                  data-bs-target="#nav-chef"
+                  type="button"
+                  role="tab"
+                  aria-controls="nav-chef"
+                  aria-selected="false"
+                >
+                  <span><i class="fa-solid fa-lightbulb"></i></span>
+                  Chef's Tips
+                </button>
+              </div>
+            </nav>
+            <div class="tab-content mt-3 my-5 rounded-4" id="nav-tabContent">
+              <div
+                class="tab-pane fade show active"
+                id="nav-ingredients"
+                role="tabpanel"
+                aria-labelledby="nav-ingredients-tab"
+                tabindex="0"
+              >
+                <ul
+                  class="list-unstyled d-flex flex-column gap-3"
+                  id="listingrediants"
+                ></ul>
+              </div>
+              <div
+                class="tab-pane fade"
+                id="nav-instruction"
+                role="tabpanel"
+                aria-labelledby="nav-instruction-tab"
+                tabindex="0"
+              >
+                <ul
+                  class="list-unstyled d-flex flex-column gap-4"
+                  id="listInstructons"
+                ></ul>
+              </div>
+              <div
+                class="tab-pane fade nav-nutrition"
+                id="nav-nutrition"
+                role="tabpanel"
+                aria-labelledby="nav-nutrition-tab"
+                tabindex="0"
+              >
+                <div class="row g-2 my-2">
+                  <div class="col-lg-6">
+                    <div
+                      class="item-nutrition rounded-4 d-flex justify-content-between align-items-center p-4"
+                    >
+                      <div class="logo-item d-flex align-items-center gap-2">
+                        <span class="calori"
+                          ><i class="fa-solid fa-fire"></i
+                        ></span>
+                        <h4 class="my-0">Calories</h4>
+                      </div>
+                      <div class="number-item">
+                        <p class="my-0" id="fCalory"></p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-6">
+                    <div
+                      class="item-nutrition rounded-4 d-flex justify-content-between align-items-center p-4"
+                    >
+                      <div class="logo-item d-flex align-items-center gap-2">
+                        <span class="proten"
+                          ><i class="fa-solid fa-dumbbell"></i
+                        ></span>
+                        <h4 class="my-0">Protein</h4>
+                      </div>
+                      <div class="number-item">
+                        <p class="my-0" id="fProtien"></p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="row g-2 my-2">
+                  <div class="col-lg-6">
+                    <div
+                      class="item-nutrition rounded-4 d-flex justify-content-between align-items-center p-4"
+                    >
+                      <div class="logo-item d-flex align-items-center gap-2">
+                        <span class="carbo"
+                          ><i class="fa-solid fa-wheat-awn"></i
+                        ></span>
+                        <h4 class="my-0">Carbohydrates</h4>
+                      </div>
+                      <div class="number-item">
+                        <p class="my-0" id="fCarbo"></p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-6">
+                    <div
+                      class="item-nutrition rounded-4 d-flex justify-content-between align-items-center p-4"
+                    >
+                      <div class="logo-item d-flex align-items-center gap-2">
+                        <span class="fat"
+                          ><i class="fa-solid fa-droplet"></i
+                        ></span>
+                        <h4 class="my-0">Fat</h4>
+                      </div>
+                      <div class="number-item">
+                        <p class="my-0" id="fFat"></p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="row g-2 my-2 rounded-3">
+                  <div class="col-lg-6">
+                    <div
+                      class="item-nutrition rounded-4 d-flex justify-content-between align-items-center p-4"
+                    >
+                      <div class="logo-item d-flex align-items-center gap-2">
+                        <span class="fiber"
+                          ><i class="fa-solid fa-seedling"></i
+                        ></span>
+                        <h4 class="my-0">Fiber</h4>
+                      </div>
+                      <div class="number-item">
+                        <p class="my-0" id="fFiber"></p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-6">
+                    <div
+                      class="item-nutrition rounded-4 d-flex justify-content-between align-items-center p-4"
+                    >
+                      <div class="logo-item d-flex align-items-center gap-2">
+                        <span class="sodium"
+                          ><i class="fa-solid fa-cube"></i
+                        ></span>
+                        <h4 class="my-0">Sodium</h4>
+                      </div>
+                      <div class="number-item">
+                        <p class="my-0" id="fSodium"></p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="tab-pane fade"
+                id="nav-chef"
+                role="tabpanel"
+                aria-labelledby="nav-chef-tab"
+                tabindex="0"
+              >
+                <ul class="list-unstyled chef-list" id="chefTipsList"></ul>
+              </div>
+            </div>
+            <button
+              class="btn py-2 px-3 rounded-3 text-white btn-change"
+              onclick="viewMeals()"
+            >
+              <i class="fa-solid fa-rotate"></i>
+              Try Another Recipe
+            </button>
+          </div>
+        </div>
+      </div>
+    </header>
+    <script src="./Js Files/bootstrap.bundle.min.js"></script>
+    <script src="./Js Files/main.js"></script>
+  </body>
+</html>

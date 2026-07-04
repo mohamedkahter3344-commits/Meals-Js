@@ -1,0 +1,387 @@
+:root {
+  --main-color: #ff5505;
+  --secondary-color: #6a7282;
+}
+
+/* Nav Bar */
+
+nav {
+  box-shadow: .0625rem .0625rem .1875rem var(--main-color);
+}
+
+.navbar-toggler ,
+.navbar-toggler:focus {
+  border: none !important;
+  box-shadow: none !important;
+  transition: 0.3s;
+}
+
+.navbar-toggler:hover {
+  color: var(--main-color);
+}
+
+nav .logo span {
+  background-color: var(--main-color);
+  width: 3.125rem;
+  height: 3.125rem;
+  font-size: 1.25rem;
+}
+
+nav .logo .title-logo p {
+  font-size: .875rem;
+  font-weight: 400;
+  line-height: 1.25rem;
+  color: var(--secondary-color);
+}
+
+nav .img-person {
+  width: 2.5rem;
+  height: 2.5rem;
+  border: .1875rem solid var(--main-color);
+}
+
+nav .nav-item .nav-link {
+  font-size: 1.25rem;
+  font-weight: 400;
+  line-height: 1.75rem;
+  color: #4a5565;
+  transition: 0.3s;
+}
+
+nav .nav-item .nav-link:hover {
+  color: var(--main-color);
+}
+
+.navbar-collapse .nav-item {
+  position: relative;
+}
+
+.navbar-collapse .nav-item.save-recipe::after {
+  content: "Saved Recipes";
+}
+
+.navbar-collapse .nav-item.recent::after {
+  content: "Recent";
+}
+
+.navbar-collapse .nav-item.setting::after {
+  content: "Setting";
+}
+
+.navbar-collapse .nav-item.profile::after {
+  content: "Profile";
+}
+
+/* Header */
+.custom-scroll {
+  max-height: 100vh;
+  overflow-y: auto;
+  padding-right: .9375rem;
+  scrollbar-width: thin;
+  scrollbar-color: var(--main-color) transparent;
+}
+
+.custom-scroll::-webkit-scrollbar {
+  width: .375rem;
+}
+
+.custom-scroll::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.custom-scroll::-webkit-scrollbar-thumb {
+  background-color: var(--main-color);
+  border-radius: 10px;
+}
+
+.custom-scroll::-webkit-scrollbar-thumb:hover {
+  background-color: #d44300;
+}
+
+header .row {
+  border: .0625rem solid #ff54058f;
+}
+
+header .image-food .reviews {
+  left: 1.25rem;
+  top: 1.25rem;
+}
+
+header .image-food .reviews i {
+  font-size: .875rem;
+  font-weight: 400;
+  line-height: 1.25rem;
+}
+
+header .image-food .reviews strong {
+  font-size: .875rem;
+  font-weight: 600;
+  line-height: 1.25rem;
+}
+
+header .image-food .reviews p {
+  font-size: .75rem;
+  font-weight: 400;
+  line-height: 1rem;
+  color: var(--secondary-color);
+}
+
+header .prepare-time-serving {
+  bottom: 1.25rem;
+  left: 50%;
+  width: 80%;
+}
+
+header .prepare-time-serving .prepare-icon,
+header .prepare-time-serving .prepare-time-icon,
+header .prepare-time-serving .prepare-serving {
+  color: #ff6900;
+  font-size: 1.125rem;
+  font-weight: 400;
+  line-height: 1.75rem;
+}
+
+header .prepare-time-serving .prepare-time-icon {
+  color: #fb2c36;
+}
+
+header .prepare-time-serving .title-prepare {
+  font-size: .75rem;
+  font-weight: 400;
+  line-height: 1rem;
+  color: var(--secondary-color);
+}
+
+header .food-level .level-item,
+header .food-level .country-food {
+  background-color: #dbfce7;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 16px;
+  color: #008235;
+}
+
+header .food-level .country-food {
+  background-color: #dbeafe;
+  color: blue;
+}
+
+header .content-food-title .title-food-head {
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 2rem;
+  color: #101828;
+}
+
+header .content-food-title .title-food-desc {
+  font-size: .875rem;
+  font-weight: 400;
+  line-height: 1.25rem;
+  color: #4a5565;
+}
+
+header .title-food .icons-badge-food a {
+  display: block;
+  width: 3.125rem;
+  height: 3.125rem;
+  color: var(--main-color);
+  background-color: #ffedd4;
+  transition: 0.3s;
+}
+
+header .title-food .icons-badge-food a:hover {
+  background-color: #ffd6a8;
+}
+
+header .nav-food-tabs {
+  box-shadow: none;
+}
+
+header .tab-content {
+  position: relative;
+  padding-bottom: .9375rem;
+  background-color: transparent !important;
+}
+
+header .tab-content ul li span {
+  background-color: var(--main-color);
+  width: 1.5625rem;
+  height: 1.5625rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  color: white;
+}
+
+header .tab-content ul li p {
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5rem;
+  color: #364153;
+}
+
+header .tab-content::before {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  content: "";
+  width: 100%;
+  height: 1px;
+  background-color: #e5e7eb;
+}
+
+.btn-change {
+  background: linear-gradient(to right, #f44800, var(--main-color));
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.5rem;
+  transition: 0.3s;
+}
+
+.btn-change:hover {
+  transform: scale(1.1);
+}
+
+.nav-tabs .nav-item.show .nav-link,
+.nav-tabs .nav-link.active {
+  background-color: transparent !important;
+  color: var(--main-color) !important;
+  border: none;
+  position: relative;
+}
+
+.nav-tabs .nav-link.active::before {
+  position: absolute;
+  content: "";
+  bottom: -0.3125rem;
+  left: 0;
+  width: 100%;
+  height: .1875rem;
+  background-color: var(--main-color);
+}
+
+.nav-tabs .nav-link {
+  color: #364153 !important;
+  border: none !important;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.5rem;
+  color: var(--main-color);
+  margin-block: 1.25rem;
+}
+
+
+header #listInstructons li span {
+  padding: 1.5625rem;
+  font-weight: bold;
+}
+
+header #listInstructons li p {
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5rem;
+  color: #364153 !important;
+}
+
+header .item-nutrition {
+  background-color: #f9fafb;
+}
+
+header .nav-nutrition .row {
+  border: none;
+}
+
+header .item-nutrition h4 {
+  font-size: 1rem !important;
+  font-weight: 500;
+  line-height: 1.5rem;
+  color: #364153;
+}
+
+header .item-nutrition span {
+  width: 2.5rem;
+  height: 2.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20%;
+}
+
+header .item-nutrition .number-item p {
+  font-size: 1.25rem;
+  font-weight: 700;
+  line-height: 1.75rem;
+  color: #101828;
+}
+
+header .item-nutrition .calori {
+  background-color: #ffedd4;
+  color: var(--main-color);
+}
+
+header .item-nutrition .proten {
+  background-color: #dbeafe;
+  color: #155dfc;
+}
+
+header .item-nutrition .carbo {
+  background-color: #fef9c2;
+  color: #d08700;
+}
+
+header .item-nutrition .fat {
+  background-color: #ffe2e2;
+  color: #e7000b;
+}
+
+header .item-nutrition .fiber {
+  background-color: #dbfce7;
+  color: #00a63e;
+}
+
+header .item-nutrition .sodium {
+  background-color: #fce7f3;
+  color: #e60076;
+}
+
+header #nav-chef .chef-list span {
+  background-color: #e17100;
+  border: none;
+}
+
+header #nav-chef .chef-list li {
+  background-color: #fffbeb;
+  border-left: .3125rem solid #e17100;
+}
+
+header #nav-chef .chef-list li p {
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5rem;
+  color: #364153;
+}
+
+header .alert-msg {
+  background-color: #fef2f2;
+  border-left: .3125rem solid var(--main-color);
+}
+
+header .alert-msg .title-alert h5 {
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.5rem;
+  color: #9f0712;
+}
+
+header .alert-msg span {
+  color: var(--main-color);
+  font-size: 1.25rem;
+}
+
+header .alert-msg .title-alert p {
+  font-size: .875rem;
+  font-weight: 400;
+  line-height: 1.25rem;
+  color: #e7000b;
+}
