@@ -73,6 +73,10 @@ nav .nav-item .nav-link:hover {
 }
 
 /* Header */
+
+header {
+  background-color: #FEFBEA;
+}
 .custom-scroll {
   max-height: 100vh;
   overflow-y: auto;
