@@ -44,6 +44,9 @@
   .navbar-collapse .nav-item.save-recipe::after {
     display: none;
   }
+  .navbar-collapse .nav-item::after {
+    display: none;
+  }
 }
 
 /* xl */
